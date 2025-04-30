@@ -36,4 +36,4 @@ Our bot does not use cookies or tracking mechanisms.
 We may update this policy. Continued use of the bot after changes constitutes acceptance.
 
 ## Contact
-For privacy concerns or data requests, contact [Your Contact Method]
+For privacy concerns or data requests, join here: discord.gg/GY4FQ2BRnk.
