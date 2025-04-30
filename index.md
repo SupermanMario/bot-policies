@@ -33,5 +33,5 @@ Welcome to the official documentation for Fetch+. This bot is developed and main
 Use /help for complete command list
 
 ## Support
-Join our support server: discord.gg/GY4FQ2BRnk
+Join our support server: discord.gg/GY4FQ2BRnk.
 Use /help for complete command list
