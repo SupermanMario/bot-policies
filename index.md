@@ -1,6 +1,6 @@
 # CyberShield Bot Documentation
 
-Welcome to the official documentation for [Your Bot Name]. This bot is developed and maintained by CyberShield Dev.
+Welcome to the official documentation for Fetch+. This bot is developed and maintained by CyberShield Dev.
 
 ## Quick Links
 - [Terms of Service](./terms)
