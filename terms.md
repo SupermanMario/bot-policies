@@ -23,4 +23,4 @@ By using our Discord bot ("Bot"), you agree to these Terms of Service. If you di
 We may update these terms at any time. Continued use of the Bot constitutes acceptance of new terms.
 
 ## 6. Contact
-For questions about these terms, please contact [Your Contact Method]
+For questions about these terms, please join: discord.gg/GY4FQ2BRnk.
