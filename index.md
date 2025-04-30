@@ -3,6 +3,7 @@
 Welcome to the official documentation for Fetch+. This bot is developed and maintained by CyberShield Dev.
 
 ## Quick Links
+- [Main Page](./main)
 - [Terms of Service](./terms)
 - [Privacy Policy](./privacy)
 
