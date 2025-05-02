@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Orbit | Your Ultimate Discord Bot</title>
+    <meta name="description" content="Orbit is a versatile Discord bot offering a range of features from moderation to fun utilities. Enhance your server with powerful tools and commands." />
+  
+    <!-- Favicon and Fonts -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  
+    <!-- Open Graph Meta (for social media previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Orbit - Your Ultimate Discord Bot" />
+    <meta property="og:description" content="Orbit is the all-in-one general-purpose bot for Discord. From moderation to fun features, Orbit makes your server more interactive and fun." />
+    <meta property="og:image" content="https://orbit-bot.com/images/preview/preview.jpg" />
+    <meta property="og:url" content="https://orbit-bot.com/" />
+  
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Orbit - Your Ultimate Discord Bot" />
+    <meta name="twitter:description" content="Power up your Discord server with Orbit! A general-purpose bot that brings powerful features and fun tools to enhance your community experience." />
+    <meta name="twitter:image" content="https://orbit-bot.com/images/preview/preview.jpg" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            scroll-behavior: smooth;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('images/bg/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -2;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-radius: 0 0 1rem 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        nav .menu-toggle span {
+            background: white;
+            height: 3px;
+            margin: 4px 0;
+            width: 25px;
+            border-radius: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #c59eff;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.95);
+                display: none;
+                padding: 1rem 0;
+                border-radius: 0 0 1rem 1rem;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav .menu-toggle {
+                display: flex;
+            }
+        }
+
+        header {
+            padding: 5rem 2rem 3rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 1rem;
+            margin: 2rem auto;
+            max-width: 1000px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.6;
+        }
+
+        .section {
+            padding: 3rem 2rem;
+            margin: 2rem auto;
+            max-width: 1000px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #c59eff;
+        }
+
+        .feature-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #c59eff;
+        }
+
+        .feature-box p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .cta {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem auto;
+            border-radius: 1rem;
+            max-width: 700px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .cta h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #c59eff;
+        }
+
+        .cta a {
+            display: inline-block;
+            background-color: #7f5af0;
+            padding: 0.8rem 1.6rem;
+            color: white;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .cta a:hover {
+            background-color: #9c7eff;
+        }
+
+        footer {
+            padding: 2rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            font-size: 0.9rem;
+            border-radius: 1rem 1rem 0 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">ORBIT</div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/orbit/features">Features</a></li>
+            <li><a href="/orbit/tos">ToS</a></li>
+            <li><a href="/orbit/privacy">Privacy</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Orbit — Your General Purpose Discord Bot</h1>
+        <p>Orbit is a versatile and user-friendly Discord bot that brings music, moderation, AI, fun games, levelling, and more to your server. Designed to enhance any community, Orbit is fully permission-aware, privacy-conscious, and packed with intuitive features.</p>
+        <div class="topgg-widget">
+            <a href="https://top.gg/bot/1353355560887779383" target="_blank">
+                <img src="https://top.gg/api/widget/servers/1353355560887779383.svg" alt="Orbit bot on Top.gg" style="max-width: 100%; height: auto;">
+            </a>
+        </div>
+    </header>
+
+    <section class="section" id="features">
+        <h2>🔧 Packed with Features</h2>
+        <div class="feature-boxes">
+            <div class="feature-box">
+                <h3>🎵 Music</h3>
+                <p>High-quality streaming with easy commands. Supports playlists, filters, and more.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🛡️ Moderation</h3>
+                <p>Advanced moderation tools with logging, automod, warnings, and bans.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🎮 Fun Commands</h3>
+                <p>Mini-games, trivia, memes, and other community-driven features.</p>
+            </div>
+            <div class="feature-box">
+                <h3>📈 Leveling</h3>
+                <p>Activity-based leveling system to reward active members automatically.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="tos">
+        <h2>📄 Terms of Service</h2>
+        <p>Using Orbit means agreeing to our fair use guidelines and respecting our service terms. We ensure your experience is stable and abuse-free. (More details coming soon.)</p>
+    </section>
+
+    <section class="section" id="privacy">
+        <h2>🔒 Privacy First</h2>
+        <p>We do not collect any unnecessary data. Everything Orbit does is transparent, logged where appropriate, and in your control. Privacy is a core design principle.</p>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>📬 Get in Touch</h2>
+        <p>Have feedback, a feature idea, or need help? Reach out to us anytime or join the support server below.</p>
+    </section>
+
+    <div class="cta">
+        <h3>💬 Join Our Support Server</h3>
+        <p>For real-time support, troubleshooting, and updates, join our dedicated support server:</p>
+        <a href="https://discord.gg/S8ETPFwD5u" target="_blank">Join Support Server</a>
+    </div>
+
+    <footer>
+        © 2025 Orbit Bot. All rights reserved.
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => observer.observe(section));
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
