@@ -2,7 +2,7 @@
 Last Updated: April 30, 2025
 
 ## 1. Agreement to Terms
-By using our Discord bot ("Bot"), you agree to these Terms of Service. If you disagree with any part, please do not use the Bot.
+By using our Discord bot ("Fetch+"), you agree to these Terms of Service. If you disagree with any part, please do not use the Bot.
 
 ## 2. Usage Rights
 - Users must comply with Discord's Terms of Service
